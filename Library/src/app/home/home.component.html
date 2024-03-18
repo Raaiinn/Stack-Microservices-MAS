@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1>Welcome to library</h1>
+    <h2>Here you will find all the information regarding the most iconic books of the last century</h2>
+    <div class="row row-cols-1 row-cols-md-5 g-4">
+        <div *ngFor="let book of books" class="card border-info mb-3 mx-4">       
+            <img class="card-img-top" src={{book.cover}}>
+            <div class="card-body">
+                <h3 class="card-title">{{book.title}}</h3>
+                <h5 class="card-title">Author: {{getAuthor(book.author)}}</h5>
+                <p class="card-text">Pages: {{book.pages}}</p>                
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Launch: {{book.launch | date: 'dd/MM/yyyy'}}</small>
+            </div>
+        </div>
+    </div>
+</div>
