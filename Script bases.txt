@@ -1,0 +1,63 @@
+DROP DATABASE AUTHOR;
+
+CREATE DATABASE AUTHOR;
+USE AUTHOR;
+
+CREATE TABLE AUTHOR(
+    ID INT PRIMARY KEY,
+	NAME VARCHAR(30),
+	LASTNAME VARCHAR(30),
+	BORN DATE,
+	EMAIL VARCHAR(60),
+	PASSWORD VARCHAR(300)
+);
+
+DROP DATABASE BOOK;
+
+CREATE DATABASE BOOK;
+
+USE BOOK;
+
+CREATE TABLE BOOK(
+	ID INT PRIMARY KEY,
+	TITLE VARCHAR(30),
+	LAUNCH DATE,
+	PAGES INT,
+	AUTHOR INT, 
+	COVER VARCHAR(100)
+);
+-- Insertar datos de prueba en la tabla AUTHOR
+INSERT INTO AUTHOR (ID, NAME, LASTNAME, BORN, EMAIL, PASSWORD) VALUES
+(1, 'J.K.', 'Rowling', '1965-07-31', 'jkrowling@gmail.com', '123456'),
+(2, 'George', 'Orwell', '1903-06-25', 'gorwell@yahoo.com', 'password123'),
+(3, 'Stephen', 'King', '1947-09-21', 'sking@hotmail.com', 'qwerty789'),
+(4, 'Agatha', 'Christie', '1890-09-15', 'agathachristie@gmail.com', 'agatha123'),
+(5, 'J.R.R.', 'Tolkien', '1892-01-03', 'jrrtolkien@yahoo.com', 'tolkien456'),
+(6, 'Arthur', 'Conan Doyle', '1859-05-22', 'adoyle@gmail.com', 'sherlock123'),
+(7, 'Margaret', 'Atwood', '1939-11-18', 'margaretatwood@yahoo.com', 'handmaid456'),
+(8, 'Terry', 'Pratchett', '1948-04-28', 'terrypratchett@hotmail.com', 'discworld789'),
+(9, 'Harper', 'Lee', '1926-04-28', 'harperlee@gmail.com', 'mockingbird123'),
+(10, 'Leo', 'Tolstoy', '1828-09-09', 'ltolstoy@yahoo.com', 'warpeace456');
+
+-- Insertar datos de prueba en la tabla BOOK
+INSERT INTO BOOK (ID, TITLE, LAUNCH, PAGES, AUTHOR, COVER) VALUES
+(1, 'Harry Potter and the Philosopher''s Stone', '1997-06-26', 336, 1, 'https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF1000,1000_QL80_.jpg'),
+(2, '1984', '1949-06-08', 328, 2, 'https://m.media-amazon.com/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg'),
+(3, 'The Shining', '1977-01-28', 447, 3, 'https://m.media-amazon.com/images/I/815Uhzxve5L._AC_UF1000,1000_QL80_.jpg'),
+(4, 'Murder on the Orient Express', '1934-01-01', 265, 4, 'https://m.media-amazon.com/images/I/71ihbKf67RL._AC_UF1000,1000_QL80_.jpg'),
+(5, 'The Hobbit', '1937-09-21', 310, 5, 'https://m.media-amazon.com/images/I/71k--OLmZKL._AC_UF894,1000_QL80_.jpg'),
+(6, 'The Adventures of Sherlock Holmes', '1892-10-14', 307, 6, 'https://m.media-amazon.com/images/I/61AC3ZUWHQL._AC_UF1000,1000_QL80_.jpg'),
+(7, 'The Handmaid''s Tale', '1985-06-14', 311, 7, 'https://m.media-amazon.com/images/I/61su39k8NUL._AC_UF1000,1000_QL80_.jpg'),
+(8, 'Good Omens', '1990-05-01', 432, 8, 'https://m.media-amazon.com/images/I/81E+wwGBhWL._AC_UF1000,1000_QL80_.jpg'),
+(9, 'Go Set a Watchman', '2015-07-14', 278, 9, 'https://m.media-amazon.com/images/I/91YXvPqn5jL._AC_UF1000,1000_QL80_.jpg'),
+(10, 'Anna Karenina', '1877-01-28', 864, 10, 'https://m.media-amazon.com/images/I/71dGaKPJMyL._AC_UF1000,1000_QL80_.jpg'),
+(11, 'Pride and Prejudice', '1813-01-28', 279, 2, 'https://m.media-amazon.com/images/I/61H3BvN-naL._AC_UF1000,1000_QL80_.jpg'),
+(12, 'The Catcher in the Rye', '1951-07-16', 277, 3, 'https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg'),
+(13, 'Lord of the Flies', '1954-09-17', 224, 2, 'https://m.media-amazon.com/images/I/81Gn65uv+YL._AC_UF894,1000_QL80_.jpg'),
+(14, 'The Great Gatsby', '1925-04-10', 180, 1, 'https://m.media-amazon.com/images/I/81QuEGw8VPL._AC_UF1000,1000_QL80_.jpg'),
+(15, 'War and Peace', '1869-01-01', 1225, 10, 'https://m.media-amazon.com/images/I/71wXZB-VtBL._AC_UF1000,1000_QL80_.jpg'),
+(16, 'Dracula', '1897-05-26', 418, 3, 'https://m.media-amazon.com/images/I/51XkOP7amUS._AC_UF1000,1000_QL80_.jpg'),
+(17, 'Moby Dick', '1851-10-18', 585, 2, 'https://m.media-amazon.com/images/I/51aV053NRjL._AC_UF1000,1000_QL80_.jpg'),
+(18, 'The Hitchhiker''s Guide to the Galaxy', '1979-10-12', 193, 4, 'https://m.media-amazon.com/images/I/71i2fm1QJQL._AC_UF1000,1000_QL80_.jpg'),
+(19, 'The Girl with the Dragon Tattoo', '2005-08-23', 672, 1, 'https://m.media-amazon.com/images/I/61Qs-hoZ-TL._AC_UF1000,1000_QL80_.jpg'),
+(20, 'The Picture of Dorian Gray', '1890-07-01', 254, 2, 'https://m.media-amazon.com/images/I/71ZpShPyThL._AC_UF1000,1000_QL80_.jpg');
